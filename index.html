@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Player Chess - JavaScript Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <h1>Two Player Chess</h1>
+        <p>
+          A complete two-player chess game built with HTML, CSS, and JavaScript.
+        </p>
+      </header>
+
+      <main class="game-layout">
+        <section class="left-panel card">
+          <h2>Game Info</h2>
+          <div class="info-row">
+            <span>Current Turn:</span>
+            <strong id="turnDisplay">White</strong>
+          </div>
+          <div class="info-row">
+            <span>Status:</span>
+            <strong id="statusDisplay">Game started. White to move.</strong>
+          </div>
+          <div class="info-row">
+            <span>Selected Piece:</span>
+            <strong id="selectedDisplay">None</strong>
+          </div>
+
+          <div class="controls">
+            <button id="resetBtn">Reset Game</button>
+            <button id="undoBtn">Undo Move</button>
+          </div>
+
+          <div class="legend">
+            <h3>How to Play</h3>
+            <ul>
+              <li>Click a piece to select it.</li>
+              <li>Click a highlighted square to move.</li>
+              <li>Green square = selected piece.</li>
+              <li>Blue dots = legal moves.</li>
+              <li>Red square = king in check.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="board-section card">
+          <div class="board-header">
+            <h2>Chess Board</h2>
+          </div>
+          <div id="board" class="board" aria-label="Chess board"></div>
+        </section>
+
+        <section class="right-panel card">
+          <h2>Move History</h2>
+          <ol id="moveHistory" class="move-history"></ol>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
